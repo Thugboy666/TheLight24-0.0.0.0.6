@@ -1,0 +1,21 @@
+{
+  "physics": {
+    "grav": true,
+    "coulomb": false,
+    "yukawa": false,
+    "drag": false,
+    "softening": 5e6
+  },
+  "pos": [
+    [0.0, 0.0, 0.0],
+    [1.496e11, 0.0, 0.0]
+  ],
+  "vel": [
+    [0.0, 0.0, 0.0],
+    [0.0, 29783.0, 0.0]
+  ],
+  "mass": [
+    1.9885e30,
+    5.972e24
+  ]
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8"/>
+  <title>TheLight24 – Merchant Panel (Step 8)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Merchant Panel</h1>
+    <div class="grid">
+      <section>
+        <h2>1) Crea Shop</h2>
+        <input id="owner" placeholder="owner username"/>
+        <input id="star" placeholder="star name (nome stella)"/>
+        <input id="country" placeholder="country" value="IT"/>
+        <button onclick="createShop()">Crea</button>
+        <pre id="shop_out"></pre>
+      </section>
+
+      <section>
+        <h2>2) Abilita & Flags</h2>
+        <input id="shop_id" placeholder="shop_id"/>
+        <label><input type="checkbox" id="f_b2c" checked> B2C</label>
+        <label><input type="checkbox" id="f_b2b" checked> B2B</label>
+        <label><input type="checkbox" id="f_cod"> COD</label>
+        <button onclick="enableShop()">Abilita</button>
+        <button onclick="flags()">Imposta Flags</button>
+      </section>
+
+      <section>
+        <h2>3) Add Product</h2>
+        <input id="p_sku" placeholder="SKU"/>
+        <input id="p_title" placeholder="Titolo"/>
+        <input id="p_desc" placeholder="Descrizione"/>
+        <input id="p_stock" placeholder="Stock" type="number" value="10"/>
+        <input id="p_b2c" placeholder='Prezzi B2C JSON {"EUR":9.99}' value='{"EUR":9.99}'/>
+        <input id="p_b2b" placeholder='Prezzi B2B JSON {"EUR":8.50}' value='{"EUR":8.50}'/>
+        <input id="p_tags" placeholder="tags CSV"/>
+        <input id="p_img" type="file"/>
+        <button onclick="addProduct()">Aggiungi</button>
+        <pre id="prod_out"></pre>
+      </section>
+
+      <section>
+        <h2>4) Coupons</h2>
+        <input id="c_code" placeholder="Codice"/>
+        <input id="c_percent" placeholder="Percento (0..100)" type="number" value="10"/>
+        <input id="c_min" placeholder="Min Amount" type="number" value="0"/>
+        <input id="c_aud" placeholder="Audience: any|b2c|b2b" value="any"/>
+        <input id="c_uses" placeholder="Max uses (0 illimitato)" type="number" value="0"/>
+        <button onclick="createCoupon()">Crea Coupon</button>
+        <button onclick="listCoupons()">Lista Coupon</button>
+        <pre id="coup_out"></pre>
+      </section>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

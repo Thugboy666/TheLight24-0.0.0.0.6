@@ -1,0 +1,7 @@
+TTS==0.22.0
+vosk==0.3.44
+webrtcvad==2.0.10
+sounddevice==0.4.6
+pvporcupine==3.0.3
+python-dotenv==1.0.1
+numpy==1.26.4
